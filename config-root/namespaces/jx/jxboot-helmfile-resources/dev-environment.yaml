@@ -1,0 +1,42 @@
+# Source: jxboot-helmfile-resources/templates/environments.yaml
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  labels:
+    env: "dev"
+    team: jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: "dev"
+  annotations:
+    meta.helm.sh/release-name: 'jxboot-helmfile-resources'
+    meta.helm.sh/release-namespace: 'jx'
+  namespace: jx
+spec:
+  source:
+    ref: "master"
+    url: https://github.com/josias-mk-organisation/cluster-jx-labs-dev.git
+  kind: Development
+  label: Development
+  namespace: jx
+  promotionStrategy: "Never"
+  webHookEngine: "Lighthouse"
+  teamSettings:
+    appsRepository: https://jenkins-x-charts.github.io/repo
+    defaultScheduler:
+      apiVersion: jenkins.io/v1
+      kind: Scheduler
+      name: jx-meta-pipeline
+    dockerRegistryOrg: ""
+    envOrganisation: todo
+    gitServer: https://github.com
+    kubeProvider: "eks"
+    pipelineUsername: "jmroboot"
+    pipelineUserEmail: "jenkins-x@googlegroups.com"
+    prowConfig: Scheduler
+    storageLocations:
+    - bucketUrl: "s3://logs-jx-labs-20250317234705891200000013"
+      classifier: "logs"
+    - bucketUrl: "s3://reports-jx-labs-20250317234705891200000012"
+      classifier: "reports"
+    - bucketUrl: "s3://repository-jx-labs-20250317234705891200000014"
+      classifier: "repository"
