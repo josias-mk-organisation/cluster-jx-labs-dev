@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - josias-mk-organisation/cluster-jx-labs-dev
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.18.204.73.49.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
