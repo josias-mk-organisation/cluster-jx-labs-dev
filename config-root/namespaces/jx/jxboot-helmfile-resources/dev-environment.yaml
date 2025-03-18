@@ -31,7 +31,7 @@ spec:
     gitServer: https://github.com
     kubeProvider: "eks"
     pipelineUsername: "jmroboot"
-    pipelineUserEmail: "jenkins-x@googlegroups.com"
+    pipelineUserEmail: "jmroboot@gmail.com"
     prowConfig: Scheduler
     storageLocations:
     - bucketUrl: "s3://logs-jx-labs-20250317234705891200000013"

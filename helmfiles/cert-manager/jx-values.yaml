@@ -47,6 +47,7 @@ jxRequirements:
       enabled: false
       production: false
   pipelineUser:
+    email: jmroboot@gmail.com
     username: jmroboot
   repository: nexus
   secretStorage: vault
